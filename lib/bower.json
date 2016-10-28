@@ -1,0 +1,19 @@
+{
+  "name": "api",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Bin Li <libin_75@hotmail.com>"
+  ],
+  "license": "ISC",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1"
+  }
+}
