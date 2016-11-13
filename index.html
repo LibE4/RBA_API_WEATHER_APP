@@ -10,7 +10,37 @@
 	<!-- <link rel="stylesheet" type="text/css" href="styles/main.css"> -->
 </head>
 <body>
-	<div class="container">
+	<nav class="navbar navbar-default hide" id="nav-weather">
+	  <div class="container-fluid">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <a class="navbar-brand" href="#">Weather API</a>
+	    </div>
+
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav navbar-right">
+	        <li>
+	          <a href="" id="view-saved-weather" class="cd-btn">View Saved weater</a>
+	        </li>
+	        <li id="logout-container"></li>
+	      </ul>
+	    </div>
+	    <!-- /.navbar-collapse -->
+	  </div>
+	  <!-- /.container-fluid -->
+	</nav>
+
+  <div class="container col-xs-4 col-xs-offset-4" id="login-container">
+    <h1 class="form-signin-heading">Weather API Login</h1>
+    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+    <input type="text" id="inputUsername" class="form-control" placeholder="Username" required>
+    <button class="btn btn-lg btn-success col-xs-6" id="loginButton">Login</button>
+    <button class="btn btn-lg btn-primary col-xs-6" id="registerButton">Register</button><br>
+    <button class="btn btn-lg btn-success col-xs-6" id="googleLoginButton">Google login</button>
+  </div>
+
+	<div class="container hide" id="main-weather">
 		<div class="row">
 	    <div class="col-lg-4 col-lg-offset-4">
 				<!-- input -->
@@ -30,7 +60,7 @@
 	    </div><!-- /.col-lg-4 -->
 			<div id="products">
 				<table class="table table-bordered table-striped">
-					<caption>Weather daily forecast (metric)</caption>
+					<caption id="table-caption">Weather daily forecast (metric):</caption>
 					<thead>
 						<tr>
 							<th>City</th>
@@ -39,6 +69,7 @@
 							<th>Humidity</th>
 							<th>Air Pressure</th>
 							<th>Wind Speed</th>
+							<th>Save/Delete</th>
 						</tr>
 					</thead>
 					<tbody id="dataDisplay">
@@ -48,8 +79,13 @@
 			</div>
 		</div><!-- /.row -->
 	</div>
-	<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
-	<!-- <script src="/lib/bower_components/jquery/dist/jquery.min.js" type="text/javascript" charset="utf-8" async defer></script> -->
+	<!-- <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script> -->
+	<script src="https://www.gstatic.com/firebasejs/3.6.0/firebase.js"></script>
+	<script src="/lib/bower_components/jquery/dist/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="javascripts/firebase.js"></script>
+	<script type="text/javascript" src="javascripts/firebaseAuth.js"></script>
+	<script type="text/javascript" src="javascripts/firebaseUser.js"></script>
+	<script type="text/javascript" src="javascripts/firebaseMethods.js"></script>
 	<script type="text/javascript" src="javascripts/weather.js"></script>
 </body>
 </html>

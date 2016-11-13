@@ -1,0 +1,19 @@
+{
+	"weather": {
+		"weather0": {
+			"city": "Franklin",
+			"date": "Fri Nov 11 2016",
+			"temperature": "11.22",
+			"humidity": 	"53",
+			"airpressure": 	"1023",
+			"windspeed": "3.6",
+			"uid":"GG0an5PzE8cc9tVGLhLVnIvlELO2"
+		}
+	},
+	"users":{
+		"user1":{
+			"username":"a",
+			"uid":"GG0an5PzE8cc9tVGLhLVnIvlELO2"
+		}
+	}
+}
